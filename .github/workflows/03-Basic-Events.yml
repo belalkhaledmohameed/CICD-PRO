@@ -1,0 +1,32 @@
+name: 03 Events Filters
+
+on:
+  pull_request:
+    # types:
+    #   - closed
+    #   - reopened
+    # types: [closed, reopened]
+  push:
+    # branches:
+    #   - master
+    #   - 02-Basics-Events-Branch
+    # branches-ignore: # we target all branches except master branch
+    #   - master
+    # tags:
+    #   - v3.0
+    # tags-ignore:
+    #   - v4.0
+    # paths:    # if i need to update on file on paths i put the path from the root on the .git file
+    #   - "UI/app.js"
+
+    # paths-ignore:
+    #   - 'UI/app.js'
+    paths:
+      - "UI/*.js" # route to one level
+      - "UI/**.js" # route to multi level meaning that reach to any thing.js on every folders
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-hello-world
+        run: echo "hello world"
