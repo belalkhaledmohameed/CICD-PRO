@@ -1,11 +1,12 @@
 name: 06 Basics Context
 
 on:
-  - workflow_dispatch
+  workflow_dispatch
 
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
       - name: print Context data
-        run: echo ${{ github }}
+        # run: echo ${{ github }}
+        run: echo ${{ github.actor }}
