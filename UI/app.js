@@ -51,21 +51,21 @@ app.use(
 function authenticateToken(req, res, next) {
     const token = req.cookies.token;
     if (!token) {
-      return res.redirect('/login');
-    }
-  
-    jwt.verify(token, secretKey, function (err, decoded) {
-      if (err) {
-        logger.error(err);
         return res.redirect('/login');
-      }
-  
-      // If the token is valid, attach the decoded payload to the request object
-      req.username = decoded;
-      next();
+    }
+
+    jwt.verify(token, secretKey, function (err, decoded) {
+        if (err) {
+            logger.error(err);
+            return res.redirect('/login');
+        }
+
+        // If the token is valid, attach the decoded payload to the request object
+        req.username = decoded;
+        next();
     });
-  }
-  
+}
+
 
 // Rate limiting middleware
 const limiter = rateLimit({
@@ -161,17 +161,17 @@ app.get('/logout', (req, res) => {
 // Weather endpoint
 app.get('/weather/:city', async (req, res) => {
     try {
-      const city = req.params.city;
-      const response = await axios.get(`http://${process.env.WEATHER_HOST}:${process.env.WEATHER_PORT}/${city}`);
-      const weatherData = response.data;
-      res.setHeader('Content-Type', 'application/json'); // Set Content-Type header
-      res.send(weatherData); // Send the weather data as the response
+        const city = req.params.city;
+        const response = await axios.get(`http://${process.env.WEATHER_HOST}:${process.env.WEATHER_PORT}/${city}`);
+        const weatherData = response.data;
+        res.setHeader('Content-Type', 'application/json'); // Set Content-Type header
+        res.send(weatherData); // Send the weather data as the response
     } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
+        console.error(error);
+        res.status(500).send('Internal Server Error');
     }
-  });
-  
+});
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -184,3 +184,4 @@ app.listen(port, () => {
     console.log(`Weather app listening at http://localhost:${port}`);
 });
 
+// new line 

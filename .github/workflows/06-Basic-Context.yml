@@ -11,6 +11,5 @@ jobs:
         # run: echo ${{ github.actor }}
         # run: echo ${{ github.evenet_name }}
         # run: echo ${{ job.status }}
-        # run: echo ${{ toJson(github) }}
+        # run: echo ${{ toJson(github) }} # not running but will show you the all variable of context بدل ما ترجع  لل documantation بتاع context
         run: echo ${{ toJson(github.event) }}
-        
