@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: print-hello-worlds
         run: echo "Hello World"
+
+      - name: print Conditional Message
+        run: echo "Conditional Message"
