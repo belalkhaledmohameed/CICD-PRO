@@ -1,6 +1,6 @@
 name: 07 Basics ECondition
 
-on: 
+on:
   pull_request:
     types:
       - closed
@@ -8,5 +8,5 @@ jobs:
   print-hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: print-hello-world
+      - name: print-hello-worlds
         run: echo "hello world"
