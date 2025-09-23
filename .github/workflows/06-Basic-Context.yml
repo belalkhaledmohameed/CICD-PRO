@@ -7,4 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print Context data
-        run: echo "Context Data"
+        # run: echo ${{ github }}
+        # run: echo ${{ github.actor }}
+        run: echo ${{ github.evenet_name }}
+        # run: echo ${{ job.status }}
