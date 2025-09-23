@@ -1,4 +1,4 @@
-name: 04 Basics Events External Trigger
+name: 05 Basics Events Schedule
 
 on:
   schedule:
