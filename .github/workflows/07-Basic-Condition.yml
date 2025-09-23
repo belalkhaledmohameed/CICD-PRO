@@ -14,7 +14,5 @@ jobs:
         run: echo "Hello World"
 
       - name: print Conditional Message
-        if: github.event.pull_request.changed_files >= 0
+        if: github.event.pull_request.changed_files > 1
         run: echo "this pull request has multiple file changes"
-
-
