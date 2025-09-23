@@ -10,4 +10,5 @@ jobs:
       - name: print Context data
         # run: echo ${{ github }}
         # run: echo ${{ github.actor }}
-        run: echo ${{ github.evenet_name }}
+        # run: echo ${{ github.evenet_name }}
+        run: echo ${{ job.status }}
