@@ -7,6 +7,12 @@ on:
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
+    # if: ${{ github.event.pull_request.merged == true }}
+    if: github.event.pull_request.merged == true
     steps:
       - name: print-hello-worlds
-        run: echo "hello world"
+        run: echo "Hello World"
+
+      - name: print Conditional Message
+        if: github.event.pull_request.changed_files > 1
+        run: echo "this pull request has multiple file changes"
