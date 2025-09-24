@@ -12,5 +12,4 @@ jobs:
 
     steps:
       - name: Print Config-Varaibles
-
         run: echo ${{ vars.MY_CONFIG_VAR }}
