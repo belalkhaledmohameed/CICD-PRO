@@ -7,10 +7,10 @@ env:
 on: workflow_dispatch
 
 jobs:
-  print-variables:
+  print-config-variables:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print Config-Varaibles
 
-        run: echo " Hello World "
+        run: echo ${{ vars.MY_CONFIG_VAR }}
