@@ -1,0 +1,11 @@
+name: 07 Basics Varaibles
+
+on: workflow_dispatch
+
+jobs:
+  print-variables:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Varaibles
+        run: echo "Hello World"
