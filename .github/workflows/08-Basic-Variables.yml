@@ -20,3 +20,11 @@ jobs:
       - name: Print Varaibles2
        # run: echo $MY_NAME
         run: echo ${{ env.MY_NAME2 }}
+  print-variables_2:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Print Varaibles2
+       # run: echo $MY_NAME
+        run: echo ${{ env.MY_NAME2 }}
