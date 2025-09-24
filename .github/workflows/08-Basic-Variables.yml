@@ -12,4 +12,5 @@ jobs:
 
     steps:
       - name: Print Varaibles
-        run: echo $MY_NAME
+       # run: echo $MY_NAME
+        run: echo ${{ env.MY_NAME }}
