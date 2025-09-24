@@ -183,5 +183,4 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
     console.log(`Weather app listening at http://localhost:${port}`);
 });
-
-// add new line 2
+// 
