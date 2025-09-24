@@ -7,11 +7,11 @@ run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.
 on: workflow_dispatch
 
 jobs:
-  print-config-variables:
+  print-config-secrets-variables:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Config-Secrets-Varaibles
+      - name: Print Config-Varaibles
         run: echo ${{ vars.MY_CONFIG_VAR }}
       - name: Print Config-Secrets
         run: echo ${{ secrets.MY_REPO_SECRET }}
