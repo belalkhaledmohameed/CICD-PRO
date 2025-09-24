@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # NAME: value
-      MY_NAME: 'Belal Khaled'
+      MY_NAME2: 'Yusuf Khaled'
 
     steps:
       - name: Print Varaibles
@@ -19,4 +19,4 @@ jobs:
         run: echo ${{ env.MY_NAME }}
       - name: Print Varaibles2
        # run: echo $MY_NAME
-        run: echo ${{ env.MY_NAME }}
+        run: echo ${{ env.MY_NAME2 }}
