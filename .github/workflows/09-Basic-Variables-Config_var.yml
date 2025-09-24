@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Config-Varaibles
+      - name: Print Config-Secrets-Varaibles
         run: echo ${{ vars.MY_CONFIG_VAR }}
       - name: Print Config-Secrets
         run: echo ${{ secrets.MY_REPO_SECRET }}
