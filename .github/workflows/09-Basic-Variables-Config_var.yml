@@ -15,3 +15,5 @@ jobs:
         run: echo ${{ vars.MY_CONFIG_VAR }}
       - name: Print Config-Secrets
         run: echo ${{ secrets.MY_REPO_SECRET }}
+      - name: Print Default-Varaiables
+        run: env
