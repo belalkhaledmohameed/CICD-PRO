@@ -2,8 +2,8 @@ name: 08 Basics Varaibles
 run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.run_number }}
 
 env:
- # NAME: value
-  MY_NAME: 'Belal Khaled'
+  # NAME: value
+  MY_NAME: "Belal Khaled"
 on: workflow_dispatch
 
 jobs:
@@ -11,24 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # NAME: value
-      MY_NAME2: 'Yusuf Khaled'
+      MY_NAME2: "Yusuf Khaled"
 
     steps:
       - name: Print Varaibles
-       # run: echo $MY_NAME
+        # run: echo $MY_NAME
         env:
-          MY_NAME3: 'Moahmed Khaled'
-        run: echo ${{ env.MY_NAME }} ${{ env.MY_NAME3 }}
+          MY_NAME3: "Moahmed Khaled"
+        run: echo ${{ env.MY_NAME }} & ${{ env.MY_NAME3 }}
       - name: Print Varaibles2
-       # run: echo $MY_NAME
-        run: echo ${{ env.MY_NAME2 }} 
-         
-        
+        # run: echo $MY_NAME
+        run: echo ${{ env.MY_NAME2 }}
+
   print-variables_2:
     runs-on: ubuntu-latest
 
     steps:
-    
       - name: Print Varaibles2
-       # run: echo $MY_NAME
+        # run: echo $MY_NAME
         run: echo ${{ env.MY_NAME2 }}
