@@ -18,7 +18,7 @@ jobs:
         # run: echo $MY_NAME
         env:
           MY_NAME3: "Moahmed Khaled"
-        run: echo ${{ env.MY_NAME }} & ${{ env.MY_NAME3 }}
+        run: echo '${{ env.MY_NAME }}' &  '${{ env.MY_NAME3 }}'
       - name: Print Varaibles2
         # run: echo $MY_NAME
         run: echo ${{ env.MY_NAME2 }}
