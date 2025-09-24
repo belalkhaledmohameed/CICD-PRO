@@ -21,7 +21,8 @@ jobs:
         run: echo ${{ env.MY_NAME }}
       - name: Print Varaibles2
        # run: echo $MY_NAME
-        run: echo ${{ env.MY_NAME2 , env.MY_NAME3 }}
+        run: echo ${{ env.MY_NAME2 }} ${{ env.MY_NAME3 }}
+         
         
   print-variables_2:
     runs-on: ubuntu-latest
