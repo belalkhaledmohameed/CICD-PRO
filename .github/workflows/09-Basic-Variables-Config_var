@@ -1,8 +1,8 @@
 name: 09 Basics Varaibles Configuration
 run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.run_number }}
 
-env:
-  # NAME: value
+# env:
+#   # NAME: value
 
 on: workflow_dispatch
 
