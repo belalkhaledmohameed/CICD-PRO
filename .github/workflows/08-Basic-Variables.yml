@@ -1,4 +1,4 @@
-name: 07 Basics Varaibles
+name: 08 Basics Varaibles
 run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.run_number }}
 
 env:
