@@ -9,6 +9,9 @@ on: workflow_dispatch
 jobs:
   print-variables:
     runs-on: ubuntu-latest
+    env:
+      # NAME: value
+      MY_NAME: 'Belal Khaled'
 
     steps:
       - name: Print Varaibles
