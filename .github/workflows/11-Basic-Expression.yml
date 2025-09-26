@@ -2,7 +2,7 @@ name: 11 Basics Expression
 run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.run_number }}
 
 env:
-  Run_Number: ${{ github.run_number == 1}}
+  RUN_Number: ${{ github.run_number == 1}}
 
 on: workflow_dispatch
 
