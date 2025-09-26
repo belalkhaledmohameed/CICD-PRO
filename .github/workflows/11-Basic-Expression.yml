@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} Explaining the Context with Run_Number ${{ github.
 
 env:
   RUN_Number: ${{ github.run_number > 1 && 'greater than 1' || 'less than 1'}}
-  TESTING_VALUE: ${{ CONTAIND('Hello World' , 'Wor')}}
+  TESTING_VALUE: ${{ contains('Hello World' , 'Wor')}}
   
 on: workflow_dispatch
 
