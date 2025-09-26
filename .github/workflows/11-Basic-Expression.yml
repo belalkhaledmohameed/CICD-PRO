@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Print Expression
-        run: echo ${{ env.RUN_NUMBER }}
+        run: echo ${{ github.RUN_NUMBER }}
