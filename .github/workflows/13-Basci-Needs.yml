@@ -8,15 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Project
-        run: exit 1
+        # run: exit 1
+        run: echo "This Weather APP"
   
   Test:
     runs-on: ubuntu-latest
+    needs: Build
     steps:
       - name: Test Project
         run: echo "Test Project Dependancy"
   Deploy:
     runs-on: ubuntu-latest
+    needs: [Build,Test]
     steps:
       - name: Deploy Project
         run: echo "Deploy Project Dependancy"
