@@ -1,0 +1,21 @@
+name: 13 Basic Need
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Project
+        run: exit 1
+  
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Project
+        run: echo "Test Project Dependancy"
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Project
+        run: echo "Deploy Project Dependancy"
