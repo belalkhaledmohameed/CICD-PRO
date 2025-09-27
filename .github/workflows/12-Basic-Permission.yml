@@ -5,6 +5,8 @@ run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Nu
   # NAME: value
 
 on: workflow_dispatch
+permissions:
+  issues: write
 
 jobs:
   open-issue:
