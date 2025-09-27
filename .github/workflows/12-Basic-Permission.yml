@@ -1,4 +1,4 @@
-name: 10 Basics Varaibles Practical Examples
+name: 12 Basics Permission_Token
 run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
 
 # env:
