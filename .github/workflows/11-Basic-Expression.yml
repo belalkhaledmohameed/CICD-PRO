@@ -18,6 +18,6 @@ jobs:
         run: exit 1
 
       - name: Print Expression 2
-        if: failure()
+        if: success()
         run: echo ${{env.TESTING_VALUE}} 
         
