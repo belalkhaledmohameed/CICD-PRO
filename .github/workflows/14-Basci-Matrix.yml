@@ -14,6 +14,9 @@ jobs:
           exclude:
             - os: ubuntu-latest
               php_version: 8.2
+          include: 
+            - os: macos-latest
+              php_version: 8.5
     steps:
       - name: Build Matrix
         run: echo "Build Project on Operating System (${{matrix.os}}) with version (${{ matrix.php_version }})"
