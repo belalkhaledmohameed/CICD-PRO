@@ -11,4 +11,4 @@ jobs:
           os: [ubuntu-latest, windows-latest]
     steps:
       - name: Build Matrix
-        run: echo "Build Project on Operating System (${{matrix.os}})"
+        run: echo "Build Project on Operating System ${{matrix.os}}"
