@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Project
-        run: exit 1
+        # run: exit 1
+        run: echo "This Weather APP"
   
   Test:
     runs-on: ubuntu-latest
