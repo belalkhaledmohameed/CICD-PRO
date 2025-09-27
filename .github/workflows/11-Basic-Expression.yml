@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Expression
+      - name: Print Expression 1
      #   run: echo ${{ github.RUN_NUMBER }}
+        # run: echo ${{env.TESTING_VALUE}} 
+        run: exit 1
+
+      - name: Print Expression 2
+        if: failure()
         run: echo ${{env.TESTING_VALUE}} 
+        
