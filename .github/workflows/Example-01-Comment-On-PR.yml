@@ -1,0 +1,22 @@
+name: Exmaple 01 - Commenting on PR
+run-name: Exmaple 01 - Commenting on PR
+on: 
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  Open-New-Issue-Job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5.0.0
+      - name: Comment On PR
+        
+        run: gh pr comment ${{ env.PR_NUMBER }} --body "Sorry i can't merge your PR , Kindly edit your code"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: 13
+
+     
