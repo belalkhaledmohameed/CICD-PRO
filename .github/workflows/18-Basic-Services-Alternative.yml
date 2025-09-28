@@ -6,9 +6,6 @@ on: workflow_dispatch
 jobs:
   Redis-Job:
     runs-on: ubuntu-latest
-    services:
-      redis: 
-        image:  redis:latest
     
   
     steps:
