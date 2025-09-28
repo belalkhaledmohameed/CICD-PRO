@@ -1,0 +1,20 @@
+name: Example 01 - Commenting on PR
+run-name: Example 01 - Commenting on PR
+on: 
+  pull_request:
+    types:
+      - closed
+jobs:
+  Open-New-Issue-Job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5.0.0
+
+      - name: Comment on PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr comment 13 --body "this not acceptable PR"
+
+     
