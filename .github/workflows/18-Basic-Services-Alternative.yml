@@ -1,4 +1,4 @@
-name: 17 Basic services
+name: 18 Basic services alternative
 run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
 
 on: workflow_dispatch
