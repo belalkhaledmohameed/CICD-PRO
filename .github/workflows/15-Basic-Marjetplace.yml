@@ -1,4 +1,4 @@
-name: 14 Basic Matrix
+name: 14 Basic Marketplace
 run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
 
 on: workflow_dispatch
