@@ -1,0 +1,16 @@
+name: 21 Basic Github Client
+run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
+
+on: workflow_dispatch
+
+jobs:
+  Open-New-Issue-Job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print-Hello-World
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue create --title "New Issue from Github Actions" --body "Nothing works"
+
+     
