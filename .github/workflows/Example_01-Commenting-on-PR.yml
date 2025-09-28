@@ -15,6 +15,4 @@ jobs:
       - name: Comment on PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr comment 13 --body "Hi from GitHub CLI"
-
-     
+        run: gh pr comment 13 --body "this not acceptable PR"
