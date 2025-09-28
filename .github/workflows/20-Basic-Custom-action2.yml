@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v5.0.0
       - name: Print-Hello-World
         uses: ./.github/actions/print-hello-world/
