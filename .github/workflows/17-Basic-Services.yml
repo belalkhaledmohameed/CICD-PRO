@@ -1,0 +1,15 @@
+name: 16 Basic Container
+run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
+
+on: workflow_dispatch
+
+jobs:
+  Redis-Job:
+    runs-on: ubuntu-latest
+    services:
+      redis: 
+        image:  redis:latest
+  
+    steps:
+      - name: Check Redis Connection
+        run: redis-cli ping
