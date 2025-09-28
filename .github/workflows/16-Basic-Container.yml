@@ -1,0 +1,15 @@
+name: 16 Basic Container
+run-name: ${{ github.actor }} Explaining Varaibles with Practical Example Run_Number ${{ github.run_number }}
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    container:
+      image: php:7.2
+
+
+    steps:
+      - name: Check PHP version
+        run: php -v
