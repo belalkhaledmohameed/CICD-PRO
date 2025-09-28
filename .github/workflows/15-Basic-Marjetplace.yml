@@ -9,9 +9,9 @@ jobs:
 
     steps:
       # - name: Setup PHP Version 7.2
-      #   uses: nanasess/setup-php@v4
+      #   uses: nanasess/setup-php@v4   #i want setup package of php version on ubuntu-latest to customize the runer that will overwrite the installed package at the runer and install the  new package
       #   with:
-      #     php-version: '7.2'
+      #     php-version: '7.2' # this version i want to install on the runer 
       - name: Setup PHP Version 8.4
         uses: shivammathur/setup-php@v2
         with:
