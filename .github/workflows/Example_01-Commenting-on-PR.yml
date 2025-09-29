@@ -15,7 +15,8 @@ jobs:
       - name: Comment on PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{github.event.pull_request.number}}
+          # PR_NUMBER: ${{github.event.pull_request.number}}
+          PR_NUMBER: 13
         run: gh pr comment ${{ env.PR_NUMBER }} --body "this not acceptable PR"
 
      
