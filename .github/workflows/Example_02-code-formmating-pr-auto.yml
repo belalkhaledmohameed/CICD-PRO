@@ -1,0 +1,21 @@
+name: Auto Create PR
+on:
+  push:
+    branches:
+      - master   # أو أي فرع تاني عايز تبني منه PR
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base master \        # الفرع الأساسي اللي هتدمج فيه
+            --head develop \           # الفرع اللي جالك منه التغييرات
+            --title "Auto PR from develop" \
+            --body "This PR was created automatically."
